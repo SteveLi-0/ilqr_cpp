@@ -1,0 +1,3 @@
+# Hashes of file build rules.
+f2ef789a1b596b1b6919feedf084134f proto_gen/example.pb.cc
+1c7c4b506a41b1ea3b707f125050bcd1 proto_gen/planning.pb.cc

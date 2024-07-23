@@ -1,0 +1,36 @@
+syntax = "proto2";
+
+package planning;
+
+message PathPoint {
+  optional double x_m = 1;
+  optional double y_m = 2;
+  optional double z_m = 3;
+  optional double theta_rad = 4;
+  optional double kappa = 5;
+  optional double s_m = 6;
+  optional double dkappa = 7;
+  optional double ddkappa = 8;
+  optional string lane_id = 9;
+  optional double x_derivative_mps = 10;
+  optional double y_derivative_mps = 11;
+}
+
+message Path {
+  optional string name = 1;
+  repeated PathPoint path_points = 2;
+}
+
+message TrajectoryPoint {
+  optional PathPoint path_point = 1;
+  optional double v_mps = 2;
+  optional double a_mpss = 3;
+  optional double relative_time_s = 4;
+  optional double da_mpsss = 5;
+  optional double steer_deg = 6;
+}
+
+message Trajectory {
+    optional string name  = 1;
+    repeated TrajectoryPoint trajectory_points = 2;
+}
